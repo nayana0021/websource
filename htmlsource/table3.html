@@ -14,6 +14,7 @@
   <body>
     <!-- 
         caption : 테이블 제목(중앙 정렬(기본))
+        figcaption 제목,설명 가능 정렬X
      -->
     <table border="1">
       <caption>
@@ -36,12 +37,50 @@
       </tr>
     </table>
 
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse possimus
-      qui a assumenda exercitationem? Debitis quos maxime labore rerum
-      voluptates voluptatum aperiam. Pariatur at, enim in voluptate et dolorum
-      ex?
-    </p>
+    <table border="1">
+      <figcaption>
+        <!--테이블 안에 넣었더니 정렬은 안됨-->
+        <strong>테이블</strong>
+      </figcaption>
+      <tr>
+        <th>이름</th>
+        <td>&nbsp;</td>
+        <!-- &nbsp; 공백 -->
+        <th>연락처</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>주소</th>
+        <td colspan="3"></td>
+      </tr>
+      <tr>
+        <th>자기소개</th>
+        <td colspan="3"></td>
+      </tr>
+    </table>
+
+    <figcaption>
+      <!--제목을 붙이는데도 사용가능, 설명을 붙이는데도 사용가능-->
+      <strong>테이블</strong>
+    </figcaption>
+    <table border="1">
+      <tr>
+        <th>이름</th>
+        <td>&nbsp;</td>
+        <!-- &nbsp; 공백 -->
+        <th>연락처</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>주소</th>
+        <td colspan="3"></td>
+      </tr>
+      <tr>
+        <th>자기소개</th>
+        <td colspan="3"></td>
+      </tr>
+    </table>
+
     <!-- command+shift+p->wrap->p emmit 사용 -->
   </body>
 </html>
