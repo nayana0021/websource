@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .ecosystem {
+        color: red;
+      }
+      .tiger {
+        color: blue;
+      }
+      .area p {
+        color: red;
+      }
+      p {
+        color: blue;
+      }
+      #text1 {
+        color: green;
+      }
+      #text2 {
+        color: blueviolet !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 우선 순위 : 스타일 우선순위 
+        1. !important : 1000점
+        2. 인라인 선언 : 500점
+        3. 아이디 선택자 : 100점
+        4. 클래스 선택자 (가상 클래스): 10점
+        5. 태그 선택자 (가상요소 => ::before, ::after): 1점
+        6. 전체 선택자
+        7. 상속
+
+
+        .list li.item {} 21점? - 선택자가 섞여있어서 대충 이정도라 생각하면 됨
+        .list li:hover {} 21점?
+        .box::after {} 11점?
+        #submit span {} 101점?
+        :not(.box) {}   :not() 점수 없음 10점?
+
+    
+        스타일 상속 : 자식 요소에서 별도로 스타일을 지정하지 않는 경우 스타일 속성이 전달됨
+                   글자를 다루는 속성들이 주로 전달됨
+
+/*동일한 선택자에 서로 다른 스타일을 지정해도 위에서 아래로 흐르는 특성 때문에 최종 적용은 마지막 스타일*/
+
+    -->
+    <div class="ecosystem">
+      <div class="animal">
+        동물
+        <div class="tiger">호랑이</div>
+        <div class="lion">사자</div>
+        <div class="elephant">코끼리</div>
+      </div>
+      <div class="plant">식물</div>
+    </div>
+    <div class="area">
+      <p id="text1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+        repellendus labore nesciunt in necessitatibus molestias distinctio?
+        Maiores ratione enim error eveniet debitis expedita impedit voluptatibus
+        accusantium, necessitatibus fugit magni culpa!
+      </p>
+      <p id="text2" style="color: brown">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+        repellendus labore nesciunt in necessitatibus molestias distinctio?
+        Maiores ratione enim error eveniet debitis expedita impedit voluptatibus
+        accusantium, necessitatibus fugit magni culpa!
+      </p>
+    </div>
+  </body>
+</html>
