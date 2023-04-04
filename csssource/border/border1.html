@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        margin: 15px;
+        border-radius: 10px;
+      }
+      .box1 {
+        border-style: solid;
+        border-color: blueviolet;
+      }
+      .box2 {
+        border-style: dotted;
+        border-width: 10px;
+      }
+      .box3 {
+        border-style: dashed;
+      }
+      .box4{
+        border-style: solid dashed; /* 상하좌우 지정 가능(시계방향) solid dashed - 상,우 (지정 안 한 애들은 마주보는 값과 같이 됨) */
+        border-width: 2px 4px;
+      }
+      .box5{
+        border-style: solid dashed double; /* solid dashed double (마지막것은 마주보는것으로 따라감) */
+        border-width: 2px 4px 6px;
+      }
+      .box6{
+        border-style: solid dotted;
+        border-width: 5px 10px 6px;
+        border-color: red blue black green;
+      }
+      .box7{
+        width: 500px;
+        padding: 10px;
+        border-right: 5px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- border : 테두리
+         border-style : 선 종류(solid(실선), dotted(점선), dashed(대쉬), double, groove, inset, outset, ridge)
+         border-width : 두께
+         border-color : 색상
+
+         border : 두께 스타일 색상
+
+    -->
+    <p>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+    </p>
+    <p>
+      <div class="box4"></div>
+      <div class="box5"></div>
+      <div class="box6"></div>
+    </p>
+    <p>
+        <div class="box7"></div>
+    </p>
+  </body>
+</html>

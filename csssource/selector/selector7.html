@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>선택자</title>
     <style>
-      div h1 + h2 {
-        /*div 부모 자식 h1 뒤에 바로 따라나오는 h2*/
-        color: red;
-      }
-
-      /* div h1 ~ h2 {
+      /* div h1 + h2 {
+        div 부모 자식 h1 뒤에 바로 따라나오는 h2
         color: red;
       } */
+
+      div h1 ~ h2 {
+        color: red;
+      }
 
       #container h1 + ul {
         color: blue;
@@ -31,7 +31,7 @@
         5) 자손(하위) 선택자 : 부모 자손(자식+손자)
                             div  h2
         6) 자식 선택자 : 부모 > 자식 div > h2
-        7) 인접 형제 선택자 : +(바로 따라나오는), ~(모든)
+        7) 인접 형제 선택자 : +(바로 따라나오는), ~(뒤의 모든)
      -->
     <div>
       <h1 id="title">CSS 기본 문법</h1>

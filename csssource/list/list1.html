@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .a {
+        /* list-style-type: disc;
+        list-style-position: inside; */
+        /* list-style-image: url(''); 이미지로 넣을수있음 - disc빼고 해봐 */
+
+        list-style: disc inside; /* type, position 한꺼번에 처리 */
+      }
+      .b {
+        list-style-type: circle;
+      }
+      .c {
+        list-style-type: square;
+        list-style-position: outside; /* 변화없음-기본임 */
+      }
+      .d {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 목록 스타일
+            1)순서 없는 목록(ul) : disc(기본), circle(빈원), square(사각형), none(없음)
+    -->
+    <ul class="a">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JAVASCRIPT</li>
+    </ul>
+    <ul class="b">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JAVASCRIPT</li>
+    </ul>
+    <ul class="c">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JAVASCRIPT</li>
+    </ul>
+    <ul class="d">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JAVASCRIPT</li>
+    </ul>
+  </body>
+</html>
