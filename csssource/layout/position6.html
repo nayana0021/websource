@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* food-slide
+            테두리 :2px, 실선, green
+            너비 : 800px
+            높이 : 300px
+            가운데 정렬
+            안쪽 여백 : 10px
+        */
+      .food_slide {
+        border: 2px solid green;
+        width: 800px;
+        height: 300px;
+        margin: 0 auto;
+        padding: 10px;
+        position: relative;
+      }
+
+      /* 이미지 : 왼쪽으로 배치 */
+      img {
+        float: left;
+      }
+      /* controls a
+            배경색 : #333
+            줄높이 : 50px
+            글자색 : 흰색
+            display : block 변경
+            글자 정렬 가운데
+        */
+      .controls a {
+        background: #333;
+        line-height: 50px;
+        color: white;
+        display: block;
+        text-align: center;
+        white-space: nowrap; /* 공백을 기준으로 엔터 적용 하지 말기 */
+        position: absolute;
+        top: calc(
+          50% - 25px
+        ); /* line-height가 50 이기 때문에 반만 와야하니 25로 줌 */
+      }
+      .prev {
+        right: 100%;
+      }
+      .next {
+        left: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="food_slide">
+      <img src="tomato.jpg" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni odio iste
+        harum facilis reprehenderit incidunt provident aliquid iure ipsum
+        voluptate veritatis deserunt asperiores et expedita, nesciunt temporibus
+        explicabo voluptates doloremque!
+      </p>
+      <div class="controls">
+        <a href="#" class="prev">previous project</a>
+        <a href="#" class="next">next project</a>
+      </div>
+    </div>
+  </body>
+</html>

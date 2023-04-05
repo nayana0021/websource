@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background: #ffd800;
+        margin-right: 10px;
+        float: left;
+      }
+      .box1 {
+        width: 150px;
+        height: 150px;
+        background: red;
+        border: 1px solid black;
+      }
+      .clearfix::after {
+        /* 0405 오전 10시 5분? 강의 */
+        content: "";
+        clear: both;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clearfix">
+      <div class="box">박스1</div>
+      <div class="box">박스2</div>
+      <div class="box">박스3</div>
+    </div>
+    <!--플로트로 뜰 애들은 묶는다 클래스명clearfix로 많이 씀-->
+    <div class="box1">박스4</div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure repellat
+      repudiandae dolores dolorum similique, nisi obcaecati vel! Mollitia natus
+      quia sapiente maxime temporibus nobis nulla nisi voluptates suscipit,
+      voluptate amet.
+    </p>
+  </body>
+</html>

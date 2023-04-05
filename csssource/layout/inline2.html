@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="inline2.css" />
+  </head>
+  <body>
+    <!-- block 요소를 옆으로 나열
+         1) display : inline-block;
+            - 하단, 오른쪽 공백
+            - vertical-align:top; 하단 공백 제거
+            - font-size: 0; 오른쪽 공백 제거
+            - text-align 속성 사용 가능
+            
+         2) float:left, right;
+            - 자식 요소들이 float 일 때 떠 있는 개념이기 때문에
+              부모의 height 가 0 인 상태임
+              => 1) overflow:hidden => 부모의 높이는 해결되지만, 다른(다음) 요소들이 따라온다면 해결이 다 안됨
+                 2) clear:both; -> 플로트 방향으로 흐르던걸 해제
+                    - float 다음요소에서 해제하기 (layout.html 참고)
+                    - 가상요소 사용해서 해제 (float9,10.hteml 참고)
+
+                - inline-block 공백 문제는 없음
+                - left, right 방식이 자유로움 /* right는 오른쪽부터 왼쪽으로 나열이 됨 */
+
+        3) grid
+    -->
+    <div class="grid clearfix">
+      <div class="grid-item a"></div>
+      <div class="grid-item b"></div>
+      <div class="grid-item c"></div>
+    </div>
+  </body>
+</html>
+<!-- 인라인 요소는 오른쪽과 아래쪽에 /div후 엔터 줄바꿈때문에 공백이 조금 생긴다(글꼴과 맞추려는 것 때문) -->

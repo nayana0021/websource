@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        /* 밑줄 없애기, 배경색 blue, 글자색 흰색, margin 10px */
+        text-decoration: none;
+        background: blue;
+        color: white;
+        margin: 10px;
+        width: 50px; /* 인라인요소는 위드와 하이트를 줄 수 없음 */
+        height: 50px; /*  설정을 적용시키기 위해서는 display 설정을 inline-block 을 준다 */
+        float: left; /* 블럭요소로 인식을 한다 */
+        /* display: inline-block; */
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+    </p>
+  </body>
+</html>
