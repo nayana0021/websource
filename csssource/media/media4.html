@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 모든 요소의 크기는 border 포함 */
+      * {
+        box-sizing: border-box;
+      }
+      /* body: font-family : Open Sans, 배경색:#ecf0f1 */
+      body {
+        font-family: "Open Sans";
+        background: #ecf0f1;
+      }
+      /* wrapper : width : 100%, margin : 상하 2rem 좌우 가운데, max-width : 60rem */
+      .wrapper {
+        width: 100%;
+        margin: 2rem auto;
+        max-width: 60rem;
+      }
+      .flexbg {
+        display: flex;
+      }
+      .flexbg main {
+        order: 2;
+        width: 60%;
+        padding: 1.618rem;
+      }
+
+      .flexbg .sidebar {
+        color: white;
+        width: 20%;
+        padding: 1.618rem;
+      }
+      .flexbg .left {
+        order: 1;
+        background: #3498db;
+      }
+      .flexbg .right {
+        order: 3;
+        background: #34495e;
+      }
+      /* 최대 768px */
+      @media screen and (max-width: 768px) {
+        /* flex-wrap:wrap */
+        .flexbg {
+          flex-wrap: wrap;
+        }
+        .flexbg main {
+          order: 1;
+          width: 100%;
+        }
+
+        .flexbg .sidebar {
+          width: 50%;
+        }
+        .flexbg .left {
+          order: 2;
+        }
+      }
+      /* 최대 480px */
+      @media screen and (max-width: 480px) {
+        .flexbg .sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper flexbg">
+      <main>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          recusandae molestiae perferendis earum fugiat architecto modi error
+          officiis ea aliquid minus nam magni ipsa laudantium officia blanditiis
+          maxime in voluptates adipisci provident porro, excepturi amet ducimus!
+          Distinctio magnam et vero consequatur at accusantium quaerat, nam
+          deserunt eos alias voluptates molestiae!
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          recusandae molestiae perferendis earum fugiat architecto modi error
+          officiis ea aliquid minus nam magni ipsa laudantium officia blanditiis
+          maxime in voluptates adipisci provident porro, excepturi amet ducimus!
+          Distinctio magnam et vero consequatur at accusantium quaerat, nam
+          deserunt eos alias voluptates molestiae!
+        </p>
+      </main>
+      <aside class="sidebar left">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, eos.
+        Perferendis, laudantium! Veniam quos itaque impedit doloremque, sapiente
+        blanditiis, deleniti cumque ut officiis animi molestias fuga harum
+        accusantium odit quaerat?
+      </aside>
+      <aside class="sidebar right">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, eos.
+        Perferendis, laudantium! Veniam quos itaque impedit doloremque, sapiente
+        blanditiis, deleniti cumque ut officiis animi molestias fuga harum
+        accusantium odit quaerat?
+      </aside>
+    </div>
+  </body>
+</html>
+<!-- 0406 오후 3시 40분 -->
