@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let number = Number(prompt("숫자를 입력해주세요", "숫자")); //숫자로 바꿔주세여
+      //       let number = parseInt(prompt("숫자를 입력해주세요", "숫자"));
+      //       console.log(number);
+      //       console.log(typeof number); // string 35 ==> "35"
+
+      //       // Number() ==> NaN(Not a Number) 숫자가 아닌 것을 입력하면 나타남
+
+      // //parseInt 와 Number 의 차이 : parseInt("20 25") => 하나만 해줌
+
+      //       // 양수 or 음수 출력
+      //       if (number > 0) {
+      //         console.log("양수");
+      //       } else if (isNaN(number)) {
+      //         //number == NaN 이렇게 비교는 못함. 함수를 써야함
+      //         console.log("문자임");
+      //       } else {
+      //         console.log("음수");
+      //       }
+
+      // 입력을 받은 후 짝수, 홀수 출력
+      let number = Number(prompt("숫자 입력", ""));
+      if (number % 2 == 0) {
+        // console.log("짝수");
+        document.write("짝수");
+      } else {
+        // console.log("홀수");
+        document.write("홀수");
+      }
+    </script>
+  </body>
+</html>
+<!-- 0407 오전 11시 45분 -->

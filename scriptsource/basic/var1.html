@@ -8,6 +8,8 @@
     <script>
       //head안에 작성하거나 body안에 작성
     </script>
+    <!-- 외부 파일로 작성된 스크립트 포함하기(head body 안에) -->
+    <!-- <script src="myscript.js"></script> -->
   </head>
   <body>
     <!-- 
@@ -27,10 +29,37 @@
         - 자바스크립트 라이브러리
             1) React
             2) jQuery
+
+        - 자바스크립트 선언 위치
+            1) head, body(권장) 태그 사이에 넣기 - 해석 순서에 따라 실행이 안되기도 함
+            2) 외부 파일로 작성한 후 포함시키기
+            3) 인라인 방식으로 작성(태그안에 작성)
+
+        - 변수 선언 : 타입 지정 없음
+            1) var
+            2) let
+        - 상수 선언
+            1) const
+
+            스크립트 오류가 나면 찾기 어렵다
+            순서를 지켜서 작성한다
      -->
+
+    <button type="button" onclick="location.href='https://www.naver.com'">
+      클릭
+    </button>
     <script>
       //스크립트는 이 안에 작성(head끝나기전 지점, body끝나기전 지점)
-      alert("안녕하세요");
+      // alert("안녕하세요");
+
+      // var 변수명 = 값;
+      var value1 = 3; //선언
+      console.log(value1);
+
+      let value2 = 4;
+      console.log(value2);
     </script>
   </body>
 </html>
+<!-- 0407 오전 9시 30분 -->
+<!-- 오전 10시 -->

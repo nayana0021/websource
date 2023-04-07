@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fruit = ["사과", "망고", "바나나", "수박", "자두", "포도"];
+
+      // push() : 배열 끝에 요소 추가
+      fruit.push("메론");
+
+      // unshift() : 맨 앞에 요소 추가
+      fruit.unshift("복숭아");
+
+      // 지정된 위치에 추가
+      fruit[2] = "오렌지"; //변경 하는 개념임. 기존 데이터는 없어짐
+
+      for (let index = 0; index < fruit.length; index++) {
+        document.write(fruit[index] + "<br>");
+      }
+
+      document.write("<p>요소 삭제</p>");
+      // pop() : 마지막 요소 삭제
+      fruit.pop();
+
+      // shift() : 첫번째 요소 삭제
+      fruit.shift();
+
+      // splice(위치, 갯수)
+      fruit.splice(2, 2);
+
+      fruit.forEach((item) => {
+        document.write(item + "<br>");
+      });
+    </script>
+  </body>
+</html>
+<!-- 0407 오후 1시 넘어서 -->
+<!-- 오후 2시 35분 -->
