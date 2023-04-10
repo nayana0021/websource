@@ -8,7 +8,7 @@
   </head>
   <body>
     <script>
-      // var : 변수 재선언, 할당, 함수레벨 스코프
+      // var : 변수 재선언, 할당, 함수레벨 스코프, 호이스팅 가능
       var value1 = 3; //선언,할당
       console.log(value1);
 
@@ -18,12 +18,18 @@
       value1 = 10; //재할당
       console.log(value1);
 
-      // let : 변수 재선언 불가, 할당, 블록레벨 스코프
+      console.log(a); //undefined - 아직 정의되지 않은 상황 - 자바스크립트에서는 언디파인드도 값이라고 본다
+      var a = "안녕하세요";
+      console.log(a);
+
+      // let : 변수 재선언 불가, 할당, 블록레벨 스코프, 호이스팅 불가
       //SyntaxError: Identifier 'value1' has already been declared
       //let value1 = 9; 한 스크립트 안에 동일한 let 변수명이 있으면 안됨
 
+      // console.log(value2); //Cannot access 'value2' before initialization : 생성하기 전에 호출할수 없다는 뜻. 호이스팅 불가
       let value2 = 6;
       console.log(value2);
+
       //SyntaxError: Identifier 'value2' has already been declared
       //let value2 = 7;
 

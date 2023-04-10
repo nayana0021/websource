@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 함수 선언 방식 (타입이 없어서 매개변수는 타입 안 써도 됨)
+      function multiply(a, b) {
+        return a * b;
+      }
+
+      // 함수 호출
+      console.log(multiply());
+      console.log(multiply(4, 3));
+
+      // 함수 표현식
+      // 익명함수
+      const myFunction = function (a, b) {
+        return a * b;
+      };
+
+      console.log(myFunction());
+      console.log(myFunction(5, 6));
+
+      // 함수 표현식 - 기명함수 (내부에서 사용하려고 이름 짓는다)
+      const myFunction2 = function name(a, b) {
+        return a * b;
+      };
+
+      // name 이름은 외부(function을 벗어난)에서 호출할 수 없음 - 함수표현식에서는 변수명으로만 호출됨
+      //    console.log(name(12, 3)); // Uncaught TypeError: name is not a function
+      console.log(myFunction2(7, 8));
+
+      // function 안에 function 은 선언 가능
+      function a() {
+        function b() {
+          console.log("b");
+        }
+
+        if (true) {
+          function c() {
+            console.log("c");
+          }
+        }
+
+        b();
+        c(); // 중첩이 가능하지만 외부에서 부를수있는 함수는 제일 바깥에 있는 함수이다 - 여기서는 a만 가능
+      }
+
+      // 외부에서 호출?
+      a();
+      //   b(); // b is not defined
+      //   c();
+    </script>
+  </body>
+</html>
+<!-- 0410 오전 9시 50분 -->
