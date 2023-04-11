@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // head 스크립트가 들어올 때 미리 실행되지 말고, body가 자리를 잡은 후에 실행 -> 그래서 스크립트는 body쪽에 만들라고 했음
+      // window.onload
+      // 스크립트가 미리 실행되면 안되고 화면에 요소들이 다 자리를 잡은 다음에 실행되어야 한다면 window.onload를 사용 -> head에 있을 때만 의미가 있다
+      window.onload = function () {
+        var button = document.getElementById("button");
+        button.addEventListener("click", function () {
+          alert("hello");
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <button type="button" id="button">클릭</button>
+  </body>
+</html>
+<!-- 0411 오후 3시 35분 -->
