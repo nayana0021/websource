@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        width: 150px;
+        height: 80px;
+      }
+      .box1 {
+        background: yellow;
+
+        transform: translate(0);
+        transition: all 0.5s; /* 모든 것들은 0.5초 안에 실행 */
+      }
+      .box2 {
+        margin: 500px 100px;
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1">Hello world</div>
+    <div class="box box2">Hello world</div>
+    <script>
+      // box1 클릭 시 박스위치를 이동
+      document.querySelector(".box1").addEventListener("click", (e) => {
+        // 박스 위치 이동
+        e.target.style.transform = `translate(100px,300px)`;
+      });
+
+      // box2 클릭하면 확대시키기
+      document.querySelector(".box2").addEventListener("click", (e) => {
+        // 박스 위치 이동
+        e.target.style.transform = `scale(1.5)`;
+      });
+      /* 세로축 방향으로 1.5배 커짐(X:가로, Y:세로, scale: x,y 전부 1.5, scale(3,1.5): 각 지정한 값으로 커짐) */
+    </script>
+  </body>
+</html>
+<!-- 0413 14:40 -->

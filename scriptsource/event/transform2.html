@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        width: 300px;
+        height: 150px;
+        border: 2px solid black;
+
+        overflow: hidden;
+      }
+      .wrap {
+        width: 1500px;
+
+        transform: translate(0);
+        transition: all 0.5s;
+      }
+      .box {
+        width: 300px;
+        height: 150px;
+        float: left;
+      }
+      .box1 {
+        background: yellow;
+      }
+      .box2 {
+        background: red;
+      }
+      .box3 {
+        background: lightcyan;
+      }
+      .box4 {
+        background: lightpink;
+      }
+      .box5 {
+        background: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <div class="box box1">Box1</div>
+        <div class="box box2">Box2</div>
+        <div class="box box3">Box3</div>
+        <div class="box box4">Box4</div>
+        <div class="box box5">Box5</div>
+      </div>
+    </div>
+    <div class="btn-area">
+      <button type="button" class="prev">이전</button>
+      <button type="button" class="next">다음</button>
+    </div>
+    <script>
+      // 캐러셀 움직일 때
+      // -size * 인덱스
+      const wrap = document.querySelector(".wrap");
+
+      let index = 0;
+
+      // 이전 클릭 시
+      document.querySelector(".prev").addEventListener("click", (e) => {
+        if (index == 0) return;
+
+        index -= 1;
+        wrap.style.transform = `translate(-${300 * index}px)`;
+      });
+
+      // 다음 클릭 시
+      document.querySelector(".next").addEventListener("click", (e) => {
+        if (index == 4) return;
+        index += 1;
+        wrap.style.transform = `translate(-${300 * index}px)`;
+      });
+      /* 세로축 방향으로 1.5배 커짐(X:가로, Y:세로, scale: x,y 전부 1.5, scale(3,1.5): 각 방향으로 지정한 값으로 커짐) */
+    </script>
+  </body>
+</html>
+<!-- 0413 14:40 -->
