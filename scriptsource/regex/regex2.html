@@ -7,7 +7,25 @@
     <title>Document</title>
   </head>
   <body>
+    <p>01012345678</p>
+    <div id="result"></div>
     <script>
+      // p 에 있는 text 값을 가져와서 전화번호 규칙에 맞는지 확인
+      // 규칙에 맞지 않으면 result 에 전화번호를 확인해주세요
+      // 010-1234-5678
+
+      // const re = /^[0-9]{3}-[0-9]{4}-[0-9]{4}$/;
+      const re = /^\d{3}-\d{4}-\d{4}$/;
+      // re.test(원본문자열)
+
+      let result = re.test(document.querySelector("p").innerText);
+      console.log("정규식 매칭 결과", result);
+
+      if (result != true) {
+        document.querySelector("#result").innerText =
+          "전화번호를 확인해 주세요";
+      }
+
       // 정규식 패턴 작성하기
       // flag : g(전체 일치), i(대소문자 구별 말고), m(엔터를 기준으로 여러문장에 걸쳐서)
       // 1) . : 모든 문자(숫자,영어,한글,특수문자,공백)와 매치(점 하나는 문자 하나) - (엔터는 제외!) o. : o로 시작하는 두 글자 아무거나
@@ -43,3 +61,4 @@
 </html>
 <!-- 0413 16:40 -->
 <!-- 17:33 -->
+<!-- 0414 오전 9:35 -->
